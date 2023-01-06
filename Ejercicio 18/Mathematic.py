@@ -79,7 +79,10 @@ class Mathematic:
         result = values[0]
         # Scrolling down the list
         for i in range(1, len(values)):
-            # Apply divition to values
-            result *= values[i] ** (-1)
+            try:
+                # Apply divition to values
+                result *= values[i] ** (-1)
+            except ZeroDivisionError:
+                print(f"Se omitio el valor {values[i]} debido a que resulta en una division entre cero")
 
         return result
