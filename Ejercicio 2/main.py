@@ -51,7 +51,7 @@ def enter_invertion_data() -> Invertion:
     # Input annual invertion rate value by keyboard
     annual_invertion_rate = input_int("Ingresar tasa de interes anual: ")
     # Input years value by keyboard
-    years = input_int("Ingresar años de inversion: ")
+    years = input_int("Ingresar anios de inversion: ")
 
     return Invertion(invertion, annual_invertion_rate, years)
 
