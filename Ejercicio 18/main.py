@@ -107,57 +107,15 @@ def input_values() -> list[float]:
 
     return values
 
-def menu_operations() -> None:
-    """Manage the menu operations
-    """
-    # Variable that indicates if user has select exit option
-    exit = False
-
-    # keep menu option execution until select exit option
-    while not exit:
-        # Clear screen and print menu option
-        os.system("cls")
-        print(
-            "OPERACIONES MATEMATICAS BASICAS",
-            "\n1.- Suma",
-            "\n2.- Resta",
-            "\n3.- Multiplicacion",
-            "\n4.- Division",
-            "\n5.- Salir"
-        )
-        
-        # Select option of menu
-        option = input_int("Seleccione una operacion: ")
-
-        # Exit of menu if select exit option
-        if option == 5:
-            break
-
-        # Input values by keyboard
-        values = input_values()
-
-        # Select operations to apply at the list of values
-        match option:
-            case 1:
-                print(f"Result = {Mathematic.addition(values)}")
-            
-            case 2:
-                print(f"Result = {Mathematic.substraction(values)}")
-
-            case 3:
-                print(f"Result = {Mathematic.multiplication(values)}")
-
-            case 4:
-                print(f"Result = {Mathematic.divition(values)}")
-
-            case _:
-                pass
-
-        # Pause execution of program
-        os.system("pause > nul")
-
 def main() -> None:
-    menu_operations()
+    # Input values by keyboard
+    values = input_values()
+
+    # Select operations to apply at the list of values
+    print(f"Suma = {Mathematic.addition(values)}")        
+    print(f"Resta = {Mathematic.substraction(values)}")        
+    print(f"Multiplicacion = {Mathematic.multiplication(values)}")        
+    print(f"Division = {Mathematic.divition(values)}")
 
 if __name__ == "__main__":
     main()
