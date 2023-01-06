@@ -1,4 +1,17 @@
 class Student:
+    """Class that contain the grades of any student and can calculates his stadistics
+
+    Attributes:
+        __grades: list[float]
+        __max_grade: float
+    
+    Methods:
+        add_grade
+        average
+        total
+        percentage
+    """
+
     __grades: list[float]
     __max_grade: float
 
